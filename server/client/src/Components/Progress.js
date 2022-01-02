@@ -34,7 +34,7 @@ function Progress() {
 
       const parseRes = await response.json();
       console.log(parseRes,"from progress")
-      setItem([parseRes])
+      setItem([...item, parseRes])
       setWeight("")
       setDuration("")
       setExercise("")
@@ -71,7 +71,7 @@ function Progress() {
 
     fetchData();
 
-  },[])
+  },[item])
   return (
     <div id="progress" className="progress-container">
         <form className="workout-details-form" onSubmit= {handleSubmit}   >
