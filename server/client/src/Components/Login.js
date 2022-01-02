@@ -42,6 +42,7 @@ function Login() {
           setError(parseRes.message)
         }else{
           history.push(`/profile/${parseRes.id}`)
+          localStorage.setItem("id", parseRes.id);
         }
           
       } catch (err) {
