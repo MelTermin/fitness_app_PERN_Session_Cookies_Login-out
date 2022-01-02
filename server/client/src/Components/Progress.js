@@ -34,7 +34,7 @@ function Progress() {
 
       const parseRes = await response.json();
       console.log(parseRes,"from progress")
-      setItem([...item, parseRes])
+      setItem([parseRes])
       setWeight("")
       setDuration("")
       setExercise("")
