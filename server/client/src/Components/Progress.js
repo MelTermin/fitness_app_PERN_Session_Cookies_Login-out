@@ -14,7 +14,7 @@ function Progress() {
   const [duration,setDuration]=useState("")
   const [date,setDate]=useState("")
   const [item,setItem]=useState([]);
-  const [detail,setdetail]=useState([]);
+  
 
 
   const handleSubmit= async (e) => {
@@ -61,7 +61,7 @@ function Progress() {
         }
         });
         console.log(response);
-        setdetail(response.data)
+        setItem(response.data)
      
 
         
