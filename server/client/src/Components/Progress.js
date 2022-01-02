@@ -14,6 +14,7 @@ function Progress() {
   const [duration,setDuration]=useState("")
   const [date,setDate]=useState("")
   const [item,setItem]=useState([]);
+  const [detail,setdetail]=useState([]);
 
 
   const handleSubmit= async (e) => {
@@ -60,7 +61,7 @@ function Progress() {
         }
         });
         console.log(response);
-        setItem(response.data)
+        setdetail(response.data)
      
 
         
@@ -71,7 +72,7 @@ function Progress() {
 
     fetchData();
 
-  },[item])
+  },[])
   return (
     <div id="progress" className="progress-container">
         <form className="workout-details-form" onSubmit= {handleSubmit}   >
