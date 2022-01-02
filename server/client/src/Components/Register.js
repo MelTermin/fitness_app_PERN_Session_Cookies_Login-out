@@ -25,7 +25,7 @@ function Register() {
     try {
       const body = { email, password,name };
       const response = await fetch(
-        "http://localhost:7000/auth/register",
+        "https://fitnessappmel.herokuapp.com/auth/register",
         {
           method: "POST",
           headers: {

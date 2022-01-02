@@ -26,7 +26,7 @@ function Login() {
       try {
         const body = { email, password };
         const response = await fetch(
-          "http://localhost:7000/auth/login",
+          "https://fitnessappmel.herokuapp.com/auth/login",
           {
             method: "POST",
             headers: {

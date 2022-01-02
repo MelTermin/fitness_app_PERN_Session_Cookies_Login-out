@@ -9,7 +9,7 @@ function ProgressList({item,setItem}) {
 const onDeleteUser= async (id) => {
         console.log("tracker_item_id", id)
         try {
-          const response = await axios.delete(`http://localhost:7000/user/${id}/tracker`,{
+          const response = await axios.delete(`https://fitnessappmel.herokuapp.com/user/${id}/tracker`,{
             withCredentials: true,
             headers: {
               "Accept": "application/json",
@@ -25,7 +25,7 @@ const onDeleteUser= async (id) => {
 
   return (
     <div>
-               <table className="styled-table">
+        <table className="styled-table">
         <thead>
           <tr>
           

@@ -24,7 +24,7 @@ function Profile() {
   useEffect(()=> {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/user/${id}/getuser`,{
+        const response = await axios.get(`https://fitnessappmel.herokuapp.com/user/${id}/getuser`,{
           withCredentials: true,
           headers: {
             "Accept": "application/json",

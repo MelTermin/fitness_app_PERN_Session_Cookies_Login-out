@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import {useParams,useHistory} from "react-router-dom"
+import {useParams,} from "react-router-dom"
 
 import ProgressList from './ProgressList'
 import axios from "axios";
@@ -21,7 +21,7 @@ function Progress() {
     try {
       const body = { exercise,repetition,weight,duration,date };
       const response = await fetch(
-        `http://localhost:7000/user/${id}/tracker`,
+        `https://fitnessappmel.herokuapp.com/user/${id}/tracker`,
         {
           method: "POST",
           headers: {
@@ -52,7 +52,7 @@ function Progress() {
   useEffect(()=> {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/user/${id}/getuser`,{
+        const response = await axios.get(`https://fitnessappmel.herokuapp.com/user/${id}/getuser`,{
           withCredentials: true,
           headers: {
             "Accept": "application/json",

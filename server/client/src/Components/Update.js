@@ -21,7 +21,7 @@ function Update() {
   },[])
 
   const getItem= async () => {
-    const response= await axios.get(`http://localhost:7000/user/${id}`,{
+    const response= await axios.get(`https://fitnessappmel.herokuapp.com/user/${id}`,{
       withCredentials: true,
       headers: {
         "Accept": "application/json",
@@ -44,7 +44,7 @@ function Update() {
     try {
       const body = { exercise, repetition,weight,date,duration };
       const response = await fetch(
-        `http://localhost:7000/user/${id}/tracker`,
+        `https://fitnessappmel.herokuapp.com/user/${id}/tracker`,
         {
           method:"PUT",
           headers: {
