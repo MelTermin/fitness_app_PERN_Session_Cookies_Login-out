@@ -72,7 +72,7 @@ function Progress() {
 
     fetchData();
 
-  },[item])
+  },[setItem])
   return (
     <div id="progress" className="progress-container">
         <form className="workout-details-form" onSubmit= {handleSubmit}   >
