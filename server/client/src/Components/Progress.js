@@ -60,7 +60,7 @@ function Progress() {
             "Content-Type": "application/json",                
         }
         });
-        console.log(response);
+       
         setItem(response.data)
      
 
